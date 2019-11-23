@@ -13,8 +13,8 @@ public class User implements Serializable{
     private Date birthday; // 生日ntytyjnyt
     private String gender; // 性别童年投入
     private String username; // 用户名，唯一挺好挺好用
-    private String passwordfffvrvrv; // 密码
-    private String ddgsfbgdfgtrsdddddddsfsdd;  //cdcddcdbc
+    private String fvfvfpasswordfffvrvrffffffv; // 密码
+    private String ffffvfddgsfbgdfgtrsdddddddsfsddffffffffffff;  //cdcddcdbc
     private String remark; // 备注
     private String station; // 状态
     private String telephone; // 联系电话
