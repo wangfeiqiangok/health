@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <security:http pattern="/css/**" security="none"></security:http>
+    <security:http pattern="/js/**" security="none"></security:http>
+    <security:http pattern="/login.html" security="none"></security:http>
+    <security:http pattern="/faile.html" security="none"></security:http>
+
+    <!--拦截http
+    auto-config:自动装配
+    -->
+   <security:http auto-config="true" use-expressions="false">
+       <security:intercept-url pattern="/**" access="ROLE_ADMIN"></security:intercept-url>
+
+       <security:form-login login-page="/login.html" login-processing-url="/login.do" username-parameter="username" password-parameter="password"
+                            default-target-url="/index.html"
+                            always-use-default-target="false"
+                            authentication-failure-url="/faile.html"
+       />
+       <!--禁止跨域访问的限制-->
+       <security:csrf disabled="true"></security:csrf>
+
+       <security:logout logout-url="/logout.do" logout-success-url="/login.html" invalidate-session="true"/>
+   </security:http>
+    <!--开启权限控制-->
+    <security:global-method-security pre-post-annotations="enabled"/>
+
+    <!--认证授权管理器-->
+    <security:authentication-manager >
+        <security:authentication-provider user-service-ref="securityUserService">
+            <!--使用密码加密器-->
+            <security:password-encoder ref="encoder"/>
+
+            <!--<security:user-service>-->
+                <!--<security:user name="admin"  password="{noop}admin" authorities="ROLE_ADMIN"></security:user>-->
+            <!--</security:user-service>-->
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+
+<bean id="securityUserService" class="com.heima.security.SecurityUserServiceImpl"></bean>
+<bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"  ></bean>
+
+
+</beans>
