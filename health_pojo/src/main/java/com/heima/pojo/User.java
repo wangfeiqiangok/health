@@ -9,10 +9,10 @@ import java.util.Set;
  * 用户
  */
 public class User implements Serializable{
-    private Integer id; // 主键你好啊啊  
+    private Integer idrgregrg; // 主键你好啊啊
     private Date birthday; // 生日ntytyjnyt
     private String gender; // 性别童年投入
-    private String usernamerfrfwefer; // 用户名，唯一挺好挺好用
+    private String username; // 用户名，唯一挺好挺好用
     private String passwordfffvrvrv; // 密码
     private String ddgsfbgdfgtrsdddddddsfsdd;  //cdcddcdbc
     private String remark; // 备注
