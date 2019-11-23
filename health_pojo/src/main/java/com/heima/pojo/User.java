@@ -1,4 +1,4 @@
-﻿package com.heima.pojo;
+package com.heima.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -15,9 +15,9 @@ public class User implements Serializable{
     private String username; // 用户名，唯一挺好挺好用
     private String fvfvfpasswordfffvrvrffffffv; // 密码
     private String ffffvfddgsfbgdfgtrsdddddddsfsddffffffffffff;  //cdcddcdbc
-    private String remark; // 备注
-    private String station; // 状态
-    private String telephone; // 联系电话
+    private String bfbdfbfremark; // 备注
+    private String bdfbfdbfdbtation; // 状态
+    private String tfbfdbfdbfdbbdfbelephone; // 联系电话
     private Set<Role> roles = new HashSet<Role>(0);//对应角色集合
 
     public Integer getId() {
