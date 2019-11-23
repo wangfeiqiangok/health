@@ -1,4 +1,4 @@
-package com.heima.pojo;
+﻿package com.heima.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -10,9 +10,9 @@ import java.util.Set;
  */
 public class User implements Serializable{
     private Integer idrgregrg; // 主键你好啊啊
-    private Date birthday; // 生日ntytyjnyt
-    private String gender; // 性别童年投入
-    private String username; // 用户名，唯一挺好挺好用
+    private Date vsdvfdbdfbirthday; // 生日ntytyjnyt
+    private String fbdfbfdbgender; // 性别童年投入
+    private String fdbdfbfdbusername; // 用户名，唯一挺好挺好用
     private String fvfvfpasswordfffvrvrffffffv; // 密码
     private String ffffvfddgsfbgdfgtrsdddddddsfsddffffffffffff;  //cdcddcdbc
     private String bfbdfbfremark; // 备注
